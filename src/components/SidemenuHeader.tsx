@@ -5,7 +5,6 @@ import {
   makeStyles,
   IconButton,
   Typography,
-  Hidden
 } from "@material-ui/core";
 import OpenIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
@@ -71,7 +70,7 @@ export const SidemenuHeader: React.FC<props> = ({ onClose, onOpen, expanded }) =
         </IconButton>
       ) : (
         <IconButton onClick={() => onOpen()}>
-          <OpenIcon titleAccess="Close Menu" />
+          <OpenIcon titleAccess="Open Menu" />
         </IconButton>
 
       )}
