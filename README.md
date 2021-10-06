@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Getting Started
 
-run **npm install** in the root directory to installed dependencies
+run **npm install** in the root directory to install dependencies
 
 ## Available Scripts
 
