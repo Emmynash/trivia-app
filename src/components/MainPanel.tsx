@@ -1,9 +1,8 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import {
   createStyles,
   makeStyles
 } from "@material-ui/core";
-import { classes } from 'istanbul-lib-coverage';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -14,7 +13,10 @@ const useStyles = makeStyles((theme) =>
       zIndex: 0,
       position: "relative",
       overflowY: "auto",
-      padding: theme.spacing(4)
+      padding: theme.spacing(4),
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(2),
+      }
     }
   })
 )
