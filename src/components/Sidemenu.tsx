@@ -3,7 +3,6 @@ import {
   makeStyles,
   createStyles,
   Paper,
-  Typography,
   Divider,
   IconButton,
   MenuList,
@@ -11,6 +10,7 @@ import {
   ListItemText
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/HomeOutlined";
+import { Link } from "react-router-dom";
 import { useSideBarContext } from "hooks";
 import { SidemenuHeader } from "components";
 import { useSwipeable } from "react-swipeable";
@@ -65,17 +65,17 @@ export const Sidemenu: React.FC = () => {
           <Divider />
 
           <MenuList dense>
-            {expanded ? (
-              <MenuItem>
-                <ListItemText>Start Quiz</ListItemText>
+            {expanded ? [
+              <MenuItem component={Link} to={`/`} >
+                <ListItemText>Home</ListItemText>
               </MenuItem>
-            ) : (
+            ] : [
               <MenuItem>
-                <IconButton>
+                <IconButton component={Link} to={`/`} >
                   <HomeIcon titleAccess="Home" />
                 </IconButton>
               </MenuItem>
-            )}
+            ]}
           </MenuList>
         </>
 
